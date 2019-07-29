@@ -7,8 +7,11 @@
         <Label class="action-bar-title" text="Favorites"></Label>
     </ActionBar>
 
-    <GridLayout class="page-content">
-        <Label class="page-icon fa" text="&#xff004;"></Label>
-        <Label class="page-placeholder" text="Favorites Page"></Label>
-    </GridLayout>
+       <ListView items="{{ favoritesArray }}" itemTap="favorites" class="list-group">
+        <ListView.itemTemplate>
+            <StackLayout orientation="horizontal" class="list-group-item">
+                <Label style="font-size: 20px;" class="stationTitle" text="{{ name }}" textWrap="true"></Label>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
 </Page>

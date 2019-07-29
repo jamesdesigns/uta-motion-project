@@ -1,5 +1,6 @@
 const HomeItemsViewModel = require("./home-items-view-model");
 
+
 function onNavigatingTo(args) {
     const component = args.object;
     component.bindingContext = new HomeItemsViewModel();
@@ -19,6 +20,7 @@ function onItemTap(args) {
     // }
     // localStorage[tappedItem.name] = tappedItem.favorite;
     // listView.refresh();
+    // End of New
 
     page.frame.navigate({
         moduleName: "home/home-item-detail/home-item-detail-page",
@@ -33,23 +35,37 @@ function onItemTap(args) {
 }
 
 function favorites(args) {
-
-    console.log("Hello World!"); 
-    console.log(args);
-
-
     const button = args.object;
     button.text = `   `;
+    // button.text = `   `;
 
+    // This is only a Test
+    var favoritesArray = [];
+    console.log("Hello World!"); 
+    console.log(args);
+    // New
+    const view = args.view;
+    const page = view.page;
+    const tappedItem = view.bindingContext;
+    // End of New
 
-    // const view = args.view;
-    // const page = view.page;
-    // const tappedItem = view.bindingContext;
+    if (button.tappedItem) {
+        button.bindingContext = false;
+    }
+     else {
+        button.bindingContext = true;
+    }
 
-    // page.frame.navigate({
-    //     moduleName: "favorites/favorites-page",
-    //     context: tappedItem
-    // });
+    // This is only a Test
+    // favoritesArray.push("Test 1","Test 2","Test 3");
+    console.log(favoritesArray);
+
+    // NEW - This takes the Favorites Icon to the Favorites Page
+    page.frame.navigate({
+        moduleName: "favorites/favorites-page",
+        context: tappedItem
+    });
+    // End of New
 
   
 
