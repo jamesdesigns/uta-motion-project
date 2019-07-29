@@ -33,12 +33,14 @@ function onItemTap(args) {
 }
 
 function favorites(args) {
+
     console.log("Hello World!"); 
     console.log(args);
-    let favorites = 'SAVE ';
+
 
     const button = args.object;
-    button.text = `${favorites}`;
+    button.text = `   `;
+
 
     // const view = args.view;
     // const page = view.page;
@@ -57,3 +59,4 @@ function favorites(args) {
 exports.favorites = favorites;
 exports.onItemTap = onItemTap;
 exports.onNavigatingTo = onNavigatingTo;
+
