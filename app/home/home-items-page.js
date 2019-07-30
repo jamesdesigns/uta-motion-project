@@ -37,39 +37,30 @@ function onItemTap(args) {
 function favorites(args) {
     const button = args.object;
     button.text = `   `;
-    // button.text = `   `;
 
     // This is only a Test
-    var favoritesArray = [];
     console.log("Hello World!"); 
     console.log(args);
+
     // New
-    const view = args.view;
-    const page = view.page;
-    const tappedItem = view.bindingContext;
+    // const view = args.view;
+    // const page = view.page;
+    // const tappedItem = view.bindingContext;
     // End of New
 
-    if (button.tappedItem) {
-        button.bindingContext = false;
-    }
-     else {
-        button.bindingContext = true;
-    }
-
-    // This is only a Test
-    // favoritesArray.push("Test 1","Test 2","Test 3");
-    console.log(favoritesArray);
+    // if (button.tappedItem) {
+    //     button.bindingContext = false;
+    // }
+    //  else {
+    //     button.bindingContext = true;
+    // };
 
     // NEW - This takes the Favorites Icon to the Favorites Page
-    page.frame.navigate({
-        moduleName: "favorites/favorites-page",
-        context: tappedItem
-    });
-    // End of New
-
-  
-
-    
+    // page.frame.navigate({
+    //     moduleName: "favorites/favorites-page",
+    //     context: tappedItem
+    // });
+    // End of New    
 }
 
 exports.favorites = favorites;
