@@ -1,5 +1,5 @@
 const HomeItemsViewModel = require("./home-items-view-model");
-
+require("nativescript-localstorage");
 
 function onNavigatingTo(args) {
     const component = args.object;
@@ -10,6 +10,7 @@ function onItemTap(args) {
     const view = args.view;
     const page = view.page;
     const tappedItem = view.bindingContext;
+
 
     // New
     // const listView = page.getViewById('list_view');
@@ -37,11 +38,40 @@ function onItemTap(args) {
 function favorites(args) {
     const button = args.object;
     button.text = `   `;
-
     // This is only a Test
-    console.log("Hello World!"); 
-    console.log(args);
+    // console.log("This is a Test");
+    // console.log(args);
 
+    // New
+    let favoritesArray = [];
+    newTest = { name: 'Test'}
+
+    favoritesArray.push(newTest);
+    console.log(favoritesArray.length);
+    // Store Them
+    favoritesString = JSON.stringify(favoritesArray)
+    localStorage.setItem('Favorites', favoritesString)
+    // Retrieve Them
+    retrievedFavoritesString = localStorage.getItem('Favorites')
+    arrayThatICanUse = JSON.parse(retrievedFavoritesString)
+
+    console.log(arrayThatICanUse)
+    // newItem1 = {name: 'Salt Lake Central'};
+    // favoritesArray.push(newItem1);
+
+    // localStorage.setItem('Another Test', 'This is a another test' );
+    // console.log("Keys stored", localStorage.length);
+
+    // // Store Them
+    // favoritesString = JSON.stringify(favoritesArray);
+    // localStorage.setItem('Favorites', favoritesString);
+
+    // //Retrieve Them
+    // retrievedFavoriteString = localStorage.getItem('Favorites');
+    // arrayThatICanUse = JSON.parse(retrievedFavoriteString);
+    // console.log(favoritesArray);
+    // console.log(retrievedFavoriteString);
+    // console.log(arrayThatICanUse);
     // New
     // const view = args.view;
     // const page = view.page;

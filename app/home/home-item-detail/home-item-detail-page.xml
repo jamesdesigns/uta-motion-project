@@ -27,7 +27,7 @@
                 <Label visibility="{{ routes.NBtime ? 'visible' : 'collapsed' }}"  style="font-size: 20px; color: #c11327; line-height: 3;" text="{{ routes.NBtime }}" textWrap="true"></Label>
             </FlexboxLayout>
     
-            <Button style="background-color: #86858c; width: 80%; margin-top:20; font-weight: bold;" class="btn btn-primary m-t-10" text="{{ SBtime ? 'Hide' : 'South Bound' }}" tap="toggle"></Button>
+            <Button style="background-color: #86858c; width: 80%; margin-top:20; font-weight: bold;" class="btn btn-primary m-t-10" text="{{ routes.SBtime ? 'Hide' : 'South Bound' }}" tap="toggle"></Button>
             <Label style="font-size: 23px; color: #1b1a28; font-weight: 900;" class="m-5 station topM" row="0" col="0" colspan="2" text="Departure Times"></Label>
             <FlexboxLayout width="400" height="550">
                 <Label style="font-size: 20px; color: #c11327; line-height: 3;" text="{{ routes.SBtime }}" textWrap="true" width="410" height="190"></Label>
