@@ -42,15 +42,16 @@ function favorites(args) {
     // console.log("This is a Test");
     // console.log(args);
 
-    // New
+    // Place Entries Into an Array
     let favoritesArray = [];
-    newTest = { name: 'Test'}
-
+    newTest = { name: 'Add To Favorites'} // Must add the data from tapping the Heart Icon here
     favoritesArray.push(newTest);
     console.log(favoritesArray.length);
+
     // Store Them
     favoritesString = JSON.stringify(favoritesArray)
     localStorage.setItem('Favorites', favoritesString)
+
     // Retrieve Them
     retrievedFavoritesString = localStorage.getItem('Favorites')
     arrayThatICanUse = JSON.parse(retrievedFavoritesString)
