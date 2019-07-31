@@ -2,7 +2,7 @@ const observableModule = require("tns-core-modules/data/observable");
 
 function HomeItemsViewModel() {
     const viewModel = observableModule.fromObject({
-
+      
         items: [
             {
                 name: "Ogden",
@@ -215,6 +215,7 @@ function HomeItemsViewModel() {
                 },
             }
         ]
+
     });
 
     return viewModel;
