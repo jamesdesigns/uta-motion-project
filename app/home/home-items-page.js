@@ -1,5 +1,5 @@
 const HomeItemsViewModel = require("./home-items-view-model");
-require("nativescript-localstorage");
+const localStorage = require("nativescript-localstorage");
 
 function onNavigatingTo(args) {
     const component = args.object;
@@ -39,7 +39,7 @@ function favorites(args) {
     const button = args.object;
     button.text = `   `;
     // This is only a Test
-    // console.log("This is a Test");
+    console.log("This is a Test");
     // console.log(args);
 
     // Place Entries Into an Array
@@ -56,7 +56,7 @@ function favorites(args) {
     retrievedFavoritesString = localStorage.getItem('Favorites')
     arrayThatICanUse = JSON.parse(retrievedFavoritesString)
 
-    console.log(arrayThatICanUse)
+    console.log(favoritesArray)
     // newItem1 = {name: 'Salt Lake Central'};
     // favoritesArray.push(newItem1);
 
