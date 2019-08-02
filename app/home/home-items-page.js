@@ -56,23 +56,8 @@ function favorites(args) {
     retrievedFavoritesString = localStorage.getItem('Favorites')
     arrayThatICanUse = JSON.parse(retrievedFavoritesString)
 
-    console.log(favoritesArray)
-    // newItem1 = {name: 'Salt Lake Central'};
-    // favoritesArray.push(newItem1);
-
-    // localStorage.setItem('Another Test', 'This is a another test' );
-    // console.log("Keys stored", localStorage.length);
-
-    // // Store Them
-    // favoritesString = JSON.stringify(favoritesArray);
-    // localStorage.setItem('Favorites', favoritesString);
-
-    // //Retrieve Them
-    // retrievedFavoriteString = localStorage.getItem('Favorites');
-    // arrayThatICanUse = JSON.parse(retrievedFavoriteString);
-    // console.log(favoritesArray);
-    // console.log(retrievedFavoriteString);
-    // console.log(arrayThatICanUse);
+    console.log(favoritesString)
+ 
     // New
     // const view = args.view;
     // const page = view.page;
