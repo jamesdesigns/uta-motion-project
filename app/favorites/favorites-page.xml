@@ -7,10 +7,10 @@
         <Label class="action-bar-title" text="Favorites"></Label>
     </ActionBar>
 
-       <ListView items="{{ favoritesArray }}" itemTap="favorites" class="list-group">
+       <ListView items="{{ items }}" itemTap="onItemTap" class="list-group">
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal" class="list-group-item">
-                <Label style="font-size: 20px;" class="stationTitle" text="{{ name }}" textWrap="true"></Label>
+                <Label style="font-size: 20px;" class="stationTitle" text="{{ favorite }}" textWrap="true"></Label>
             </StackLayout>
         </ListView.itemTemplate>
     </ListView>

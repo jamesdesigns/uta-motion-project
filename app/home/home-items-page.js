@@ -38,18 +38,18 @@ function onItemTap(args) {
 function favorites(args) {
     const button = args.object;
     button.text = `   `;
+
     // This is only a Test
     console.log("This is a Test");
-    // console.log(args);
 
     // Place Entries Into an Array
-    let favoritesArray = [];
+    let saveFavorites = [];
     newTest = { name: 'Add To Favorites'} // Must add the data from tapping the Heart Icon here
-    favoritesArray.push(newTest);
-    console.log(favoritesArray.length);
+    saveFavorites.push(newTest);
+    console.log(saveFavorites.length);
 
     // Store Them
-    favoritesString = JSON.stringify(favoritesArray)
+    favoritesString = JSON.stringify(saveFavorites)
     localStorage.setItem('Favorites', favoritesString)
 
     // Retrieve Them

@@ -5,4 +5,6 @@ function onNavigatingTo(args) {
     component.bindingContext = new FavoritesViewModel();
 }
 
+
+
 exports.onNavigatingTo = onNavigatingTo;
