@@ -9,9 +9,7 @@
         <ListView.itemTemplate>
             <StackLayout orientation="horizontal" class="list-group-item">
 
-                <!-- <Button id="list_view" tap="favorites" class="iconFont fa" text="{{ favorite ? '&#xff004;   '    : '&#xff08a;   '}}"></Button> -->
                 <Label id="list_view" tap="favorites" class="iconFont fa" text="{{ favorite ? '&#xff004;  ' : '&#xff08a;   '}}"></Label>
-                <!-- <Button tap="favorites" class="iconFont far" text="&#xff004;    "></Button> -->
                 <Label style="font-size: 20px;" class="stationTitle" text="{{ name }}" textWrap="true"></Label>
                 
             </StackLayout>

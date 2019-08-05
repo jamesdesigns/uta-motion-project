@@ -44,6 +44,7 @@ function favorites(args) {
 
     // Place Entries Into an Array
     let saveFavorites = [];
+   
     newTest = { name: 'Add To Favorites'} // Must add the data from tapping the Heart Icon here
     saveFavorites.push(newTest);
     console.log(saveFavorites.length);

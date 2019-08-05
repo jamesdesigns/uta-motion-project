@@ -5,7 +5,7 @@ Learn more about the TabView component in this documentation article:
 http://docs.nativescript.org/cookbook/ui/tab-view
 -->
 
-<TabView tabTextFontSize="25" selectedTabTextColor="Red" tabBackgroundColor="LightGray" androidTabsPosition="bottom" style="font-family:FontAwesome;" class="m-t-10 fa">
+<TabView tabTextFontSize="23" selectedTabTextColor="Red" tabBackgroundColor="LightGray" androidTabsPosition="bottom" style="font-family:FontAwesome;" class="fa">
  
     <TabViewItem title="&#xff239;">
             <Frame defaultPage="home/home-items-page"></Frame>
