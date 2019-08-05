@@ -45,7 +45,12 @@ function favorites(args) {
     // Place Entries Into an Array
     let saveFavorites = [];
    
-    newTest = { name: 'Add To Favorites'} // Must add the data from tapping the Heart Icon here
+    // newTest = { name: 'Add To Favorites'} // Must add the data from tapping the Heart Icon here
+    newTest = 
+        {
+        name: 'Ogden',
+        };
+
     saveFavorites.push(newTest);
     console.log(saveFavorites.length);
 
@@ -60,23 +65,23 @@ function favorites(args) {
     console.log(favoritesString)
  
     // New
-    // const view = args.view;
-    // const page = view.page;
-    // const tappedItem = view.bindingContext;
+    const view = args.view;
+    const page = view.page;
+    const tappedItem = view.bindingContext;
     // End of New
 
-    // if (button.tappedItem) {
-    //     button.bindingContext = false;
-    // }
-    //  else {
-    //     button.bindingContext = true;
-    // };
+    if (button.tappedItem) {
+        button.bindingContext = false;
+    }
+     else {
+        button.bindingContext = true;
+    };
 
     // NEW - This takes the Favorites Icon to the Favorites Page
-    // page.frame.navigate({
-    //     moduleName: "favorites/favorites-page",
-    //     context: tappedItem
-    // });
+    page.frame.navigate({
+        moduleName: "favorites/favorites-page",
+        context: tappedItem
+    });
     // End of New    
 }
 
