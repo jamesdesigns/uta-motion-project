@@ -7,7 +7,7 @@
         <Label class="action-bar-title" text="Alerts"></Label>
     </ActionBar>
 
-    <GridLayout columns="*" rows="*" width="100%" height="100%" backgroundColor="lightgray">
+    <GridLayout columns="*" rows="*" width="90%" height="100%" backgroundColor="lightgray" class="m-r-5">
         <!-- <Label text="Label 1" col="0" row="0" backgroundColor="red"/> -->
         <WebView col="0" row="0" src="{{ firstWebViewSRC }}" />
     </GridLayout>
